@@ -1,0 +1,125 @@
+.form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.input {
+    width: 90%;
+    border-radius: 29px;
+    outline: none;
+    border: 1px solid #784D5D;
+    padding-left: 21px;
+    font-size: 16px;
+    box-sizing: border-box;
+    height: 40px;
+    position: relative;
+    font-family: "Gotham Pro", sans-serif;
+}
+
+.input::placeholder {
+    font-family: "Gotham Pro", sans-serif;
+}
+
+.input:focus {
+    border: 2px solid #C34271;
+}
+
+.btn {
+    width: 40px;
+    height: 40px;
+    background: #C34271;
+    border: none;
+    border-radius: 50%;
+    position: relative;
+    display: none;
+}
+
+.btnDone {
+    display: block;
+}
+
+.btn::after {
+    content: '+';
+    color: #fff;
+    font-size: 48px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.error {
+    position: absolute;
+    top: 80px;
+    left: 47px;
+    padding: 8px;
+    background: #C34271;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #fff;
+    width: 195px;
+    z-index: 1;
+}
+
+.error::before {
+    content: '';
+    position: absolute;
+    border: 9px solid transparent;
+    border-bottom: 9px solid #C34271;
+    top: -17px;
+    left: 10px;
+}
+
+@media (max-width: 600px) {
+    .input {
+        height: 30px; 
+        font-size: 16px;
+        padding-left: 10px;
+    }
+
+    .input::placeholder {
+        font-size: 13px;
+    }
+
+    .error {
+        top: 58px;
+        left: 21px;
+        font-size: 12px;
+    }
+
+    .btn {
+        width: 33px;
+        height: 33px;
+    }
+
+    .text {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 450px) {
+    .input {
+        height: 27px;
+    }
+
+    .btn {
+        width: 26px;
+        height: 27px;
+    }
+
+    .btn::after {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 380px) {
+    .input {
+        width: 88%;
+        font-size: 12px;
+    }
+
+    .input::placeholder {
+        font-size: 11px;
+    }
+}

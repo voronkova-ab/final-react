@@ -1,0 +1,158 @@
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.btnClean {
+    position: relative;
+    background: none;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    font-family: "Gotham Pro", sans-serif;
+}
+
+.btnClean:hover {
+    border-radius: 37px;
+    background: #C34271;
+    color: #fff;
+}
+
+.error {
+    position: absolute;
+    top: -29px;
+    font-size: 13px;
+    border-radius: 9px;
+    padding: 3px 10px;
+    color: #fff;
+    background: #ff0000;
+}
+
+.error::before {
+    content: '';
+    position: absolute;
+    border: 9px solid transparent;
+    border-top: 9px solid #ff0000;
+    bottom: -18px;
+    left: 40%;
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.item {
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.itemActive {
+    background: #C34271;
+    color: #fff;
+    border-radius: 37px;
+}
+
+.number {
+    color: #C34271;
+    margin-left: 5px;
+    padding-right: 2px;
+}
+
+.numberActive {
+    font-weight: bold;
+    color: #fff;
+}
+
+@media (max-width: 1130px) {
+
+    .item,
+    .btnClean {
+        font-size: 14px;
+    }
+
+    .item {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 845px) {
+    .btnClean {
+        padding: 7px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column-reverse;
+    }
+
+    .btnClean {
+        padding: 7px;
+    }
+
+    .list {
+        margin-bottom: 4px;
+    }
+
+    .error {
+        width: 115px;
+        text-align: center;
+        top: 61px;
+    }
+
+    .error::before {
+        border-top-color: transparent;
+        border-bottom: 9px solid #ff0000;
+        bottom: 28px;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .item,
+    .btnClean {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .footer {
+        align-items: stretch;
+    }
+
+    .error {
+        right: 30%;
+    }
+}
+
+@media (max-width: 380px) {
+    .item {
+        font-size: 12px;
+    }
+
+    .error {
+        font-size: 9px;
+        top: 60px;
+    }
+
+    .error::before {
+        bottom: 22px;
+    }
+}
+
+@media (max-width: 320px) {
+
+    .item,
+    .btnClean {
+        font-size: 10px;
+    }
+
+    .error {
+        top: 53px;
+        right: 20%;
+    }
+}
