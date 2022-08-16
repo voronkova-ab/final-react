@@ -1,0 +1,124 @@
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.description {
+    flex-grow: 1;
+    color: #999999;
+}
+
+.wrap {
+    width: 260px;
+    text-align: center;
+}
+
+.input {
+    flex-grow: 2;
+    outline: none;
+    border: 2px solid rgba(120, 77, 93, 0.11);
+    border-radius: 10px;
+    padding: 7px;
+    margin-right: 5px;
+    position: relative;
+    width: 75%
+}
+
+.input::placeholder {
+    color: #999999;
+    font-size: 11px;
+}
+
+.inputError::placeholder {
+    color: #C34271;
+    position: absolute;
+    top: 0;
+}
+
+.btn {
+    width: 20px;
+    height: 20px;
+    visibility: hidden;
+    vertical-align: middle;
+}
+
+.btn_active {
+    visibility: visible;
+}
+
+@media (max-width: 1130px) {
+    .description {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 850px) {
+    .input::placeholder {
+        font-size: 10px;
+    }
+
+    .input {
+        padding: 3px;
+    }
+}
+
+@media (max-width: 730px) {
+    .description {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 480px) {
+    .form {
+        flex-direction: column;
+    }
+
+    .description {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .btn {
+        width: 15px;
+    }
+
+    .input {
+        padding: 3px;
+        font-size: 10px;
+        padding-left: 7px;
+    }
+
+    .input::placeholder {
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 430px) {
+    .description {
+        font-size: 13px;
+    }
+
+    .input::placeholder,
+    .input {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 375px) {
+    .description {
+        font-size: 9px;
+        margin-bottom: 8px;
+    }
+
+    .input {
+        padding: 3px;
+        font-size: 10px;
+        padding-left: 7px;
+    }
+
+    .input::placeholder {
+        font-size: 9px;
+    }
+}

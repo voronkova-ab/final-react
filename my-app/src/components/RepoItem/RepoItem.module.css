@@ -1,0 +1,125 @@
+p {
+    margin: 0;
+}
+
+.listItem {
+    border: 1px solid #999999;
+    padding: 5px 12px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    width: 93%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.name {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.description {
+    font-size: 12px;
+    line-height: 14px;
+    color: #999999;
+}
+
+.language {
+    padding-left: 18px;
+    font-size: 14px;
+    line-height: 17px;
+    color: #999999;
+    position: relative;
+}
+
+.languageJS::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #FFC700;
+    left: 0;
+    top: 0;
+}
+
+.languageCSS::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #563d7c;
+    left: 0;
+    top: 0;
+}
+
+.date {
+    font-size: 12px;
+    line-height: 14px;
+    color: #999999;
+}
+
+@media (max-width: 730px) {
+    .listItem {
+        margin-bottom: 6px;
+    }
+
+    .name {
+        font-size: 12px;
+        margin-bottom: 3px;
+    }
+
+    .description {
+        font-size: 10px;
+        line-height: 10px;
+    }
+
+    .date {
+        font-size: 9px;
+    }
+
+    .language {
+        padding-left: 14px;
+        font-size: 10px;
+        line-height: 14px;
+    }
+
+    .languageJS::before {
+        width: 12px;
+        height: 12px;
+    }
+
+    .languageCSS::before {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+@media (max-width: 460px) {
+    .listItem {
+        width: 89%;
+    }
+}
+
+@media (max-width: 380px) {
+    .name {
+        font-size: 9px;
+    }
+
+    .date {
+        font-size: 7px;
+        line-height: 10px;
+    }
+
+    .description {
+        font-size: 8px;
+    }
+}

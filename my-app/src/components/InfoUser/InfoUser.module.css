@@ -1,0 +1,133 @@
+.container {
+    width: 100%;
+    display: flex;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    border-bottom: 3px solid rgba(120, 77, 93, 0.11);
+}
+
+.avatar {
+    width: 150px;
+    margin-right: 40px;
+    border-radius: 9px;
+}
+
+.info {
+    align-self: center;
+    flex: 2;
+}
+
+.name {
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.infoItem {
+    font-size: 12px;
+    line-height: 14px;
+    color: #999999;
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.git {
+    position: relative;
+    padding-left: 25px;
+    text-decoration: none;
+}
+
+.git::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    background: url('./github.png') no-repeat;
+    background-size: 20px 20px;
+    width: 20px;
+    height: 20px;
+}
+
+.city {
+    position: relative;
+    padding-left: 25px;
+}
+
+.city::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    background: url('./location.png') no-repeat;
+    background-size: 20px 20px;
+    width: 20px;
+    height: 20px;
+}
+
+@media (max-width: 730px) {
+    .avatar {
+        margin-right: 26px;
+    }
+
+    .name {
+        font-size: 15px;
+    }
+
+    .infoItem {
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 490px) {
+    .avatar {
+        margin-right: 21px;
+        width: 135px;
+    }
+}
+
+@media (max-width: 430px) {
+    .container {
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+
+    .avatar {
+        width: 120px;
+    }
+
+    .name {
+        font-size: 12px;
+    }
+
+    .name,
+    .infoItem {
+        margin-bottom: 5px;
+    }
+
+    .git,
+    .city {
+        padding-left: 18px;
+        font-size: 7px;
+    }
+
+    .git {
+        padding-top: 5px;
+    }
+
+    .git::before {
+        background-size: 15px 15px;
+        width: 15px;
+        height: 15px;
+    }
+
+    .city::before {
+        background-size: 15px 15px;
+        width: 15px;
+        height: 15px;
+    }
+}
+
+@media (max-width: 370px) {
+    .avatar {
+        width: 103px;
+    }
+}
